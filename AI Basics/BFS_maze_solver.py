@@ -21,7 +21,8 @@ def bfs(maze, start, goal):
             nx, ny = dx+x, dy+y
             
             if 0 <= nx < len(maze) and 0 <= ny < len(maze[0]) and maze[nx][ny] == 1:
-                queue.append(((nx,ny),path+[(nx,ny)]))
+                if (nx, ny) not in visited:
+                    queue.append(((nx,ny),path+[(nx,ny)]))
                 
     return None, nodes_explored
 
