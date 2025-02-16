@@ -26,6 +26,8 @@ def should_hit(dealer_total, player_total, player_low_aces, player_high_aces):
     
     if dealer_total<7:
         return player_total<13
+    
+    
 
 
 
